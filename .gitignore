@@ -1,0 +1,13 @@
+.idea
+.DS_Store
+node_modules/
+dist/
+#忽略 www 外网 访问目录
+dist_www/
+
+npm-debug.log
+yarn-error.log
+yarn.lock
+
+#忽略 具体 的 api 接口 基础配置
+fetch.api.base.js

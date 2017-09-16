@@ -1,0 +1,31 @@
+cnpm init 
+
+cnpm install --save-dev webpack
+
+直接上官网撸 webpack
+
+创建一个webpack.config.js文件
+
+webpack    -g  全局注册 
+然后才能有 webpack 命令打包
+
+
+
+下一步需要引入babel-loader   (可以直接搜)
+https://github.com/babel/babel-loader
+
+
+安装babel-loader
+cnpm install --save-dev babel-loader
+报错提醒 要安装  
+cnpm install --save-dev babel-core
+webapck 命令继续报错
+需要安装 es2015
+cnpm install --save-dev babel-preset-es2015
+
+安装react 依赖
+cnpm install --save-dev react
+cnpm install --save-dev react-dom
+
+
+
