@@ -19,5 +19,10 @@ module.exports = {
                 }
             }
         ]
-    }
+        
+    },
+   /*  alias: {
+        'react/lib/ReactMount': 'react-dom/lib/ReactMount'
+    }, */
+    watch:true
 }

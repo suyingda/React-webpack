@@ -26,6 +26,66 @@ cnpm install --save-dev babel-preset-es2015
 安装react 依赖
 cnpm install --save-dev react
 cnpm install --save-dev react-dom
+后配置webpack.config.js
+es2015,react
 
+
+继续报错 缺少babel-loader
+安装 babel-preset-react
+
+完成配置
+package.json
+{
+  "name": "01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "webpack": "^3.6.0"
+  }
+}
+
+ 
+
+webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+    entry: "./app/main.js",
+    output: {
+        path: path.resolve(__dirname, "dist"), // string
+        filename: "all.js", // string
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['es2015','react']
+                    }
+                }
+            }
+        ]
+        
+    },
+    watch:true
+}
+------------------------------------
+各种报错安装---移植居然有问题哈哈（按照提示重新安装即可）
 
 
