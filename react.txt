@@ -88,4 +88,19 @@ module.exports = {
 ------------------------------------
 各种报错安装---移植居然有问题哈哈（按照提示重新安装即可）
 
+-----------------------------------------------------------
+配置 less-loader   style-loader  css-loader   less
 
+配置webpack.config.js
+ {
+                test:/\.less$/,
+                 use:[{
+                     loader:"style-loader" 
+                 },{
+                     loader:"css-loader"
+                 },{
+                     loader:"less-loader"
+                 }]
+            }
+
+------------------------------

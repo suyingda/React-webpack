@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import App from "./props/Index.js";
+import App from "./color/Index.js";
 
 
 render(
