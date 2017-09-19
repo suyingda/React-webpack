@@ -38,7 +38,7 @@ class Show extends Component {
     }
 }
 
-/* ReactDOM.render((
+ReactDOM.render((
     <Router>
         <Route path="/" component={Router}>
             <Route path="TV" component={TV}>
@@ -48,5 +48,5 @@ class Show extends Component {
             </Route>
         </Route>
     </Router>
-),) */
+),)
 export default Router;

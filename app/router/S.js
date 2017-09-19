@@ -1,7 +1,7 @@
 
 import React, { Component } from "react"
 import In from './Index.js'
-import {Router,Route,link} from 'react-router'
+
 class S extends Component {
 
     render() {

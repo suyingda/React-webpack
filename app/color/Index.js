@@ -10,13 +10,6 @@ class App extends Component {
             g: 20,
             b: 30
         }
-        /* this.setColor=(this.setColor).bind(this) */
-        /*   this.getColor = () => {
-              console.log("没")
-              return {
-                  "backgroundColor": `rgb(${this.state.r},${this.state.g},${this.state.b}`
-              }
-          } */
     }
     // 设置函数
     setColor(color, value) {
