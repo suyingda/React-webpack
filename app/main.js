@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import App from "./redux2/Index.js";
+import App from "./Time/Index.js";
 
 
 
