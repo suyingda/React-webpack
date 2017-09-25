@@ -3,7 +3,7 @@
 import React, { Component } from "react"
 import Board from './Board.js'
 
-import './less.less'
+
 class ShoppingList extends Component {
     render() {
         return (
