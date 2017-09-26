@@ -1,72 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter, Route, Link, Switch } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Route
+} from 'react-router-dom';
+import App from './modules/App.js';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>App</h1>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/topics">Topics</Link></li>
-                </ul>
 
-            </div>
-        );
-    }
-}
-const Home = () => (
-    <div>
-        <h2>Home</h2>
-    </div>
-)
+import Home from './modules/home.js';
+import Order from './modules/order';
+import Cart from './modules/cart';
+import My from './modules/my';
 
 const About = () => (
-    <div>
-        <h2>About</h2>
-    </div>
+    <h3>About Page</h3>
 )
-const Topics = ({ match }) => (
-    <div>
-        <h2>Topics</h2>
-        <ul>
-            <li>
-                <Link to={`${match.url}/rendering`}>
-                    Rendering with React
-          </Link>
-            </li>
-            <li>
-                <Link to={`${match.url}/components`}>
-                    Components
-          </Link>
-            </li>
-            <li>
-                <Link to={`${match.url}/props-v-state`}>
-                    Props v. State
-          </Link>
-            </li>
-        </ul>
 
-        <Route path={`${match.url}/:topicId`} component={Topic} />
-        <Route exact path={match.url} render={() => (
-            <h3>Please select a topic.</h3>
-        )} />
-    </div>
+const NoMatch = () => (
+    <p>No Match</p>
 )
-const Topic = ({ match }) => (
-    <div>
-        <h3>{match.params.topicId}</h3>
-    </div>
-)
+
 ReactDOM.render(
-    (<HashRouter>
-        <App>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/topics" component={Topics} />
-        </App>
-    </HashRouter>),
+    <Router>
+        <div>
+            <Route exact path='/' component={App} />
+            <Route path='/about' component={About} />
+            <Route path='/home' component={Home} />
+            <Route path='/order' component={Order} />
+            <Route path='/cart' component={Cart} />
+            <Route path='my' component={My} />
+        </div>
+    </Router>,
     document.getElementById('app-container')
 );
